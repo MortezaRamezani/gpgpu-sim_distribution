@@ -249,7 +249,7 @@ public:
                     "function\n");
             abort();
         }
-        return(addr >> m_line_sz_log2) & (m_nset-1);
+        return(addr >> m_line_sz_log2) % (m_nset);
     }
 
     new_addr_type tag( new_addr_type addr ) const
